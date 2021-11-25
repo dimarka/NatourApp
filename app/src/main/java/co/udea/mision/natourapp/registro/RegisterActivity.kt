@@ -1,10 +1,11 @@
-package co.udea.mision.natourapp
+package co.udea.mision.natourapp.registro
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import co.udea.mision.natourapp.R
 
 class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

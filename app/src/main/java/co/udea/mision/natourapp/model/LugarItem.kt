@@ -1,7 +1,8 @@
-package co.udea.mision.natourapp
+package co.udea.mision.natourapp.model
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class LugarItem(
     @SerializedName("caliicacion")
@@ -12,4 +13,4 @@ data class LugarItem(
     val nombre: String,
     @SerializedName("urlImage")
     val urlImage: String
-)
+): Serializable

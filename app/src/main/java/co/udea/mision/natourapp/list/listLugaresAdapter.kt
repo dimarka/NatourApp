@@ -1,4 +1,4 @@
-package co.udea.mision.natourapp
+package co.udea.mision.natourapp.list
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,10 +6,15 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import co.udea.mision.natourapp.R
+import co.udea.mision.natourapp.model.LugarItem
 import com.squareup.picasso.Picasso
 
 
-class ListLugaresAdapter( private  val lugaresList :ArrayList<LugarItem>)
+class ListLugaresAdapter(
+    private val lugaresList :ArrayList<LugarItem>,
+    private val onItemClicked: (LugarItem) -> Unit
+    )
     :RecyclerView.Adapter<ListLugaresAdapter.ViewHolder> (){
 
 
@@ -19,12 +24,13 @@ class ListLugaresAdapter( private  val lugaresList :ArrayList<LugarItem>)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-val lugar=lugaresList[position]
- holder.bind(lugar)
+        val lugar=lugaresList[position]
+        holder.itemView.setOnClickListener { onItemClicked(lugaresList[position]) }
+        holder.bind(lugar)
     }
 
     override fun getItemCount(): Int {
-return lugaresList.size
+    return lugaresList.size
     }
     class ViewHolder(itemview: View):RecyclerView.ViewHolder(itemview){
         private var nameTextView:TextView= itemview.findViewById(R.id.name_text_view)

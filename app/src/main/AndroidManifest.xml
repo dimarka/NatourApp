@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Natourapp">
         <activity
-            android:name=".ListLugarActivity"
+            android:name=".list.ListLugarActivity"
             android:exported="true" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".registro.RegisterActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".detalle.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

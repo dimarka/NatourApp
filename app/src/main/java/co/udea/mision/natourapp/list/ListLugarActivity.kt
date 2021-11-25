@@ -1,10 +1,15 @@
-package co.udea.mision.natourapp
+package co.udea.mision.natourapp.list
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.DividerItemDecoration
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import co.udea.mision.natourapp.R
+import co.udea.mision.natourapp.detalle.MainActivity
+import co.udea.mision.natourapp.model.Lugar
+import co.udea.mision.natourapp.model.LugarItem
 import com.google.gson.Gson
 
 class ListLugarActivity : AppCompatActivity() {
@@ -18,7 +23,7 @@ class ListLugarActivity : AppCompatActivity() {
         lugaresRecycleview = findViewById(R.id.lugares_recycle_view)
         // listadelugares=createMockLugares()
         listadelugares = loadMochFromJson()
-        lugaresAdapter = ListLugaresAdapter(listadelugares)
+        lugaresAdapter = ListLugaresAdapter(listadelugares, onItemClicked = { onLugarClicked(it) })
         //lugaresRecycleview.addItemDecoration(DividerItemDecoration(this,DividerItemDecoration.VERTICAL))
         lugaresRecycleview.apply {
             layoutManager = LinearLayoutManager(context)
@@ -26,6 +31,12 @@ class ListLugarActivity : AppCompatActivity() {
             setHasFixedSize(false)
         }
         lugaresRecycleview.adapter = lugaresAdapter
+    }
+
+    private fun onLugarClicked(lugar: LugarItem) {
+        val intent = Intent (this, MainActivity::class.java)
+        intent.putExtra("Lugar", lugar)
+        startActivity(intent)
     }
 
     private fun loadMochFromJson(): ArrayList<LugarItem> {
