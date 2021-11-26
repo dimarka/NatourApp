@@ -8,4 +8,7 @@
     <string name="descripcion">" La Cascada Fin del Mundo se encuentra en medio de la selva amazónica, a  unos pocos kilómetros del municipio de Mocoa, y totalmente rodeada de aire puro y de un paisaje virgen cargado de cientos de especies de flora y fauna. "</string>
     <string name="calificacion">4.8</string>
     <string name="calificacionfix">Calificacion</string>
+    <string name="descripcioninView">Las especies de flora y fauna</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

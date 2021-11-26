@@ -2,11 +2,10 @@ package co.udea.mision.natourapp.detalle
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import co.udea.mision.natourapp.R
-import co.udea.mision.natourapp.databinding.ActivityListLugaresBinding
+
 import co.udea.mision.natourapp.databinding.ActivityMainBinding
 import co.udea.mision.natourapp.model.LugarItem
+import com.squareup.picasso.Picasso
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,7 +17,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(mainBinding.root)
 
 
-        /* val lugar: LugarItem = intent.extras?.getSerializable("lugar") as LugarItem
-        mainBinding.textView2 = lugar.nombre */
+        /*val lugar: LugarItem = intent.extras?.getSerializable("lugar") as LugarItem
+        with(mainBinding){
+            button.text=lugar.nombre
+            descripcionView.text=lugar.descripcion
+            Picasso.get().load(lugar.urlImage).into(imageView)
+        }*/
+
+
     }
 }

@@ -27,11 +27,11 @@
         app:srcCompat="@drawable/cascada" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/descripcionView"
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:autoSizeTextType="uniform"
-        android:text="La Cascada Fin del Mundo se encuentra en medio de la selva amazónica, a unos pocos kilómetros del municipio de Mocoa, y totalmente rodeada de aire puro y de un paisaje virgen cargado de cientos de especies de flora y fauna."
+        android:text="@string/descripcioninView"
         app:autoSizeMaxTextSize="25px" />
 
 
