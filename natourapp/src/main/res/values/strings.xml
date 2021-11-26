@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">Natourapp</string>
+    <string name="app_name">natourApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="ubicaci_n">Ubicación</string>
     <string name="registertext">Registrate</string>
     <string name="registertitle">NatourApp</string>
@@ -10,6 +13,6 @@
     <string name="calificacionfix">Calificacion</string>
     <string name="descripcioninView">Las especies de flora y fauna</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="titulodetalle">Cascada fin del mundo</string>
 </resources>
